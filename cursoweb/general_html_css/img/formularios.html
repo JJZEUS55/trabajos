@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios y campos</title>
+</head>
+<body>
+    <h2>Creando formularios</h2>
+    <form class="formulario">
+        <fieldset> 
+            <legend>Tus datos</legend>         
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="tu nombre" autocomplete="on" required>
+            <br>
+            <br>
+            <label for="apellido">Apellido: </label>
+            <input type="text"   name="apellido" id="apellido" placeholder="tu apellido" autocomplete="on">
+            <br>
+            <br>
+            <label for="sexo">Sexo </label>
+            <br>
+                <input type="radio" name="sexo" id="sexo" value="Hombre">Hombre <br>
+                <input type="radio" name="sexo" id="sexo" value="Mujer">Mujer <br>
+
+                <br>
+                <br>
+                <input type="datetime-local" name="fecha">
+            
+        
+        </fieldset>   
+            
+        <br>
+        <br>
+        <fieldset>
+            <legend>Informacion sobre curso</legend>   
+            <label for="turno">Turno</label>
+                <select name="turno" id="turno" class="turno">
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino" selected>Nocturno</option>
+                </select>
+            <br>
+            <br>
+<!-- 
+Clase 63  LISTAS-->
+            <label for="">Data List Curso que te gustaria agregar</label>
+            <input list="propuesta" name="encuesta">
+            <datalist id="propuesta"> 
+                <option value="jquery"></option>
+                <option value="Aplic web"></option>
+            </datalist>
+            
+            <br>
+            <br>
+
+            <label for="">Elije tus cursos</label>
+            <br>
+            <input type="checkbox" value="php">PHP<br>
+            <input type="checkbox" value="csha">C#<br>
+            <input type="checkbox" value="java">java<br>
+            <br>
+            <br>
+            <label for="">Fecha para iniciar curso</label>
+            <input type="month">
+            <input type="time"><br>
+            <input type="week">
+            <br>
+            <br>
+
+            <label for="">Correo electronico</label>
+            <input type="email" name="correo" placeholder="correo@dominio.com">
+
+            <br>
+            <br>
+
+            <label for="">Tu sitio web</label>
+            <input type="url" name="sitioweb" placeholder="http://www.tusitio.com">
+
+            <br>
+            <br>
+
+            <label for="">Rango</label>
+            <input type="range" name="puntaje" min="0" max="10">
+
+            <br>
+            <br>
+
+            <label for="">Personas que vienen contigo</label>   
+            <input type="number" min="1" max="5">
+
+            <br>
+            <br>
+
+              
+            
+            
+    
+            
+               
+        </fieldset>
+
+        <fieldset>
+            <legend>extras</legend>
+            <label for="">Las primeras personas con camisa</label>
+            <input type="color" name="color">
+            <br>
+            <br>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Usuario y password</legend>
+            <label for="usuario">Usuario</label>
+            <br>
+            <input type="text" name="usuario" id="usuario" placeholder="usuario">
+            <br>
+            <br>
+            <label for="password">Contraseña</label>
+            <br>
+            <input type="password" name="password" id="password" placeholder="contraseña">
+        </fieldset>
+
+        <br>
+        <br>
+        <button type="reset" >Borrar</button>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

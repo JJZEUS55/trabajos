@@ -1,0 +1,83 @@
+body{
+    background-color: gray;
+}
+
+.contenedor{
+    margin: 0 auto;
+    background-color: white;
+    width: 1000px;
+}
+
+nav ul li a{
+    color: purple;
+}
+
+
+/* Colores hexadecimal */
+h2{
+    color: #606380;
+}
+
+footer{
+    background-color: #43896e;
+    color: white;
+}
+
+/* Colores rgb */
+section#noticias{
+    background-color: rgb(242, 242, 242);
+}
+
+div.gran-promo{
+    background-color: rgb(161, 203, 255);
+}
+
+nav{
+    background-color: rgb(53, 53, 53);
+}
+
+/* Colores hsl */
+nav{
+    background-color: hsl(13, 99%, 55%)
+}
+
+nav ul li a{
+    color: hsl(0, 0%, 100%);
+}
+
+/* Oppacity */
+
+img.logo{
+    opacity: .4;
+}
+
+/* RGBA y HSLA */
+
+#noticias h2{
+    background-color: rgba(254, 73, 24, .7);
+    padding: 10px;
+    color: white;
+    border-bottom: 10px solid rgba(254, 73, 24, 1);
+}
+
+nav{
+    background-color: hsla(13, 50%, 50%, .6);
+}
+
+/* Sombras
+text shadow
+box shadow */
+h2{
+    text-shadow: 10px 10px 10px black;
+}
+
+ul#listado-cursos{
+    box-shadow: 2px 10px 10px 10px black;
+}
+
+/* Degradados */
+
+#cursos{
+    background: linear-gradient(160deg,red, blue);
+    background: radial-gradient(red 10%, blue 20%);
+}

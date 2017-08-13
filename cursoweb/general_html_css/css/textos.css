@@ -1,0 +1,112 @@
+/* Font family */
+@font-face {
+    font-family: 'bestloversregular';
+    src: url('bestlovers-webfont.woff2') format('woff2'),
+         url('bestlovers-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 30px;
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    font-size: 20px;
+}
+
+
+/* Font style */
+section.seccion p span{
+    font-style: italic;
+}
+
+div.prueba li:nth-child(2){
+    font-style: oblique;
+}
+
+/* Text transfrom */
+
+h2{
+    text-transform: uppercase;
+}
+
+a{
+    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+ul#listado-cursos li ul > li{
+    text-transform: lowercase;
+}
+
+/* Font variant */
+h3{
+    font-variant: small-caps;
+}
+
+
+/* Text decoration */
+a{
+    text-decoration: none;
+}
+
+section.seccion p span{
+    text-decoration: underline;
+}
+
+h1.oferton span{
+    text-decoration: line-through;
+}
+
+/* font weigh */
+h2{
+    font-weight: normal;
+}
+
+p{
+    font-weight: bold;
+}
+
+/* Interlineado */
+p{
+    line-height: 40px;
+}
+
+/* Text align */
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: right;
+}
+
+p{
+    text-align: justify
+}
+
+/* Espacio entre letras */
+h2{
+    letter-spacing: 10px;
+}
+
+/* indentacion de texto --- Hace texto a la derecha o
+izquierda con pixeles*/
+h2{
+    text-indent: 300px;
+}
