@@ -42,11 +42,15 @@ public class Servlet1 extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
-        out.println("<title>Servlet hola1</title>");
+        out.println("<title>Servlet 1</title>\n"
+                + "        <meta charset=\"UTF-8\">\n"
+                + "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+                + "        <link rel=\"stylesheet\" href=\"css_admin/hojacss.css\">");
         out.println("</head>");
         out.println("<body>");
         //out.println("<h1>Servlet hola1 at " + request.getContextPath() + "</h1>");
         //out.println("<h2>Hola prro mundo 1:3<h2>");
+        
         out.println("<h2>Calculo de la Ecuacion: </h2>");
         out.println("<p>a = " + ca);
         out.println("<br/>");
