@@ -33,7 +33,7 @@ public class Servlet1 extends HttpServlet {
         String password = request.getParameter("password1");
         HttpSession session = request.getSession();
 
-        session.setAttribute("userName", id);//se pone el id del usuario
+        session.setAttribute("userName", id);//se pone el id del usuario en la session
         ResultSet rs = null;
 
         try {
