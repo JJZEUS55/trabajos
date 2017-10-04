@@ -31,6 +31,7 @@ public class Servlet1 extends HttpServlet {
 //      Puedes pasar parametros o atributos a la sigueinte pagina
 //      Podemos guardar con el setAtribbute para la siguiente pagina
 //      A diferencia del send redirect que solo te redirige sencillamente a la otra pagina
+        
 
         RequestDispatcher o = request.getRequestDispatcher("/Servlet2");//Ruta relativa
         o.forward(request, response);

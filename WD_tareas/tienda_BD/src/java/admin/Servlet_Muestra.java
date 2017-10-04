@@ -39,6 +39,7 @@ public class Servlet_Muestra extends HttpServlet {
             
             rs = s.executeQuery("SELECT * FROM camisa");
             
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");

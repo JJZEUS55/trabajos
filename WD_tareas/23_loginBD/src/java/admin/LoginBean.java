@@ -16,15 +16,15 @@ class LoginBean
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection db = DriverManager.getConnection("jdbc:mysql://localhost/BD5","root", "1234");
+            Connection db = DriverManager.getConnection("jdbc:mysql://localhost/DB6","root", "1234");
             Statement s = db.createStatement();
-            rs=s.executeQuery("SELECT * FROM Usuario");
+            rs=s.executeQuery("SELECT * FROM Users");
             
             while(rs.next())
             {
-                validUsers.put(rs.getString("usuId"),rs.getString("usuPassword"));
-                tipoUs.put(rs.getString("usuId"),rs.getString("tipousuario"));
-                System.out.println(rs.getString("usuId")+" : "+ rs.getString("usuPassword"));
+                validUsers.put(rs.getString("id1"),rs.getString("contra"));
+                tipoUs.put(rs.getString("id1"),rs.getString("tipo"));
+                //System.out.println(rs.getString("usuId")+" : "+ rs.getString("usuPassword"));
             }           
             
         }
@@ -37,9 +37,9 @@ class LoginBean
     {
             if(validUsers.containsKey(userName))
             {
-                System.out.println("Entro");
+                //System.out.println("Entro");
                 String thePassword = (String)validUsers.get(userName);
-                System.out.println("Pass:" + thePassword);
+                //System.out.println("Pass:" + thePassword);
                 if(thePassword.equals(password))
                 {
                     tipo = (String)tipoUs.get(userName);

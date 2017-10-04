@@ -28,6 +28,7 @@ public class ServletConfirmar extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         Enumeration num = request.getParameterNames();
+        int precio = 0;
       
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -37,7 +38,7 @@ public class ServletConfirmar extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            while(num.hasMoreElements()){
+            while(num.hasMoreElements()){   
                 String nombre = (String) num.nextElement();
                 
                 String valores[] = request.getParameterValues(nombre);
@@ -45,14 +46,15 @@ public class ServletConfirmar extends HttpServlet {
                 if(valores != null){
                     for(int i = 0; i<valores.length; i++){
                          out.println(nombre + ": " + valores[i] + "</br>");
+                         precio = precio + Integer.parseInt(valores[i]);
                     }
                     
                 }
                 
-                
             }
+            out.println("<h3>Precio total: " + precio + "</h3>");
             //out.println("<h1>Servlet hola1 at " + request.getContextPath() + "</h1>");
-            out.println("<h2>Hola prro :3<h2>");
+            //out.println("<h2>Hola prro :3<h2>");
             out.println("</body>");
             out.println("</html>");
     }
