@@ -27,7 +27,7 @@ public class MRValidacion {
     /**
      * Checar si es primo o no *
      */
-    public boolean isPrime(long n, int iteration) {
+    public boolean isPrime(long n, int iteration, long a) {
         /**
          * base case *
          */
@@ -55,7 +55,8 @@ public class MRValidacion {
         Random rand = new Random();
         for (int i = 0; i < iteration; i++) {
             long r = Math.abs(rand.nextLong());
-            long a = r % (n - 1) + 1, temp = s;
+            //long a = r % (n - 1) + 1;
+            long temp = s;
             long mod = modPow(a, temp, n);
             while (temp != n - 1 && mod != 1 && mod != n - 1) {
                 mod = mulMod(mod, mod, n);
