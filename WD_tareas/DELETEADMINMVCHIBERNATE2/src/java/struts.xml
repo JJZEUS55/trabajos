@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<package name="actionsupportpackage" extends="struts-default">
+<action name="delete" method="execute" class="Actions.DeleteAction">
+<result name="success" >output1.jsp</result>
+</action>
+<action name="deleteuser" method="execute" class="Actions.DeleteUser">
+<result name="success" >output2.jsp</result>
+</action>
+</package>
+</struts>
