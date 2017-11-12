@@ -13,13 +13,13 @@ public class potenciacion {
 //        po.pot(28199, 27707, 209);
 //    }
 
-    public String pot(int n, int b, int c)// pot= b^c mod n
+    public String pot(long n, long b, long c)// pot= b^c mod n
     {
-        String C = Integer.toBinaryString(c);
+        String C = Long.toBinaryString(c);
         String res = null;
         res = "Algoritmos.potenciacion.pot()" + C + "\n";
         //System.out.println("Algoritmos.potenciacion.pot()"+C);
-        int z = 1;
+        long z = 1;
         for (int i = 0; i <= C.length() - 1; i++) {
             z = (z * z) % n;
             //System.out.println(C.charAt(i));

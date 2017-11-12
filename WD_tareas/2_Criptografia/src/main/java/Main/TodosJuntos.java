@@ -330,12 +330,12 @@ public class TodosJuntos extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnCalcularInversoActionPerformed
 
     private void jbtnPotenciacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPotenciacionActionPerformed
-        int n, b, c;
+        long n, b, c;
         String res = null;
         
-        n = Integer.parseInt(jtfN1.getText());
-        b = Integer.parseInt(jtfb1.getText());
-        c = Integer.parseInt(jtfC1.getText());
+        n = Long.parseLong(jtfN1.getText());
+        b = Long.parseLong(jtfb1.getText());
+        c = Long.parseLong(jtfC1.getText());
         
         potenciacion potencia = new potenciacion();
         
