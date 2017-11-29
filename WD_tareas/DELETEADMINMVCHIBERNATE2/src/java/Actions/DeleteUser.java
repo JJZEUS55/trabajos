@@ -11,9 +11,9 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class DeleteUser extends ActionSupport 
-{
-private int id;
+public class DeleteUser extends ActionSupport {
+
+    private int id;
 
     public int getId() {
         return id;
@@ -23,17 +23,16 @@ private int id;
         this.id = id;
     }
 
-    public String execute() throws Exception 
- {
- Session hibernateSession;
-  
- hibernateSession=HibernateUtil.getSessionFactory().openSession(); 
-  
- Transaction t=hibernateSession.beginTransaction(); 
- Login user=(Login)hibernateSession.load(Login.class,id);
- hibernateSession.delete(user);
- t.commit(); 
- 
- return SUCCESS;
- }  
+    public String execute() throws Exception {
+        Session hibernateSession;
+
+        hibernateSession = HibernateUtil.getSessionFactory().openSession();
+
+        Transaction t = hibernateSession.beginTransaction();
+        Login user = (Login) hibernateSession.load(Login.class, id);
+        hibernateSession.delete(user);
+        t.commit();
+
+        return SUCCESS;
+    }
 }

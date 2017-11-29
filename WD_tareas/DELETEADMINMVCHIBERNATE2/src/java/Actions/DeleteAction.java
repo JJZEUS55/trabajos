@@ -11,9 +11,9 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class DeleteAction extends ActionSupport 
-{
-private List lista;
+public class DeleteAction extends ActionSupport {
+
+    private List lista;
 
     public List getLista() {
         return lista;
@@ -23,14 +23,13 @@ private List lista;
         this.lista = lista;
     }
 
-    public String execute() throws Exception 
- {
- Session hibernateSession;
-  
- hibernateSession=HibernateUtil.getSessionFactory().openSession(); 
- Query consulta=hibernateSession.createQuery("from Login");
- lista=consulta.list();
- 
- return SUCCESS;
- }  
+    public String execute() throws Exception {
+        Session hibernateSession;
+
+        hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        Query consulta = hibernateSession.createQuery("from Login");
+        lista = consulta.list();
+
+        return SUCCESS;
+    }
 }

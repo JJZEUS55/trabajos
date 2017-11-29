@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <package name="ActionsModificar" extends="struts-default">
+        <action name="Obtener" method="execute" class="action.ObtenerUsuarios">
+            <result name="success" >listausuarios.jsp </result> 
+        </action>    
+        <action name="Modificar" method="execute" class="action.ModificarUsuario">
+            <result name="success">modificar.jsp</result>
+        </action>        
+    </package>
+</struts>

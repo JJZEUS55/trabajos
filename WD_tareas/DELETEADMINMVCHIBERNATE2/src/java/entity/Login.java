@@ -8,7 +8,6 @@ package entity;
  */
 public class Login  implements java.io.Serializable {
 
-
      private int idLogin;
      private String username;
      private String password;

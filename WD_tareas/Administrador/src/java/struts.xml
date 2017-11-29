@@ -1,0 +1,12 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="actionLogin" extends="struts-default">
+        <action name="Login" method="execute" class="actions.Login">
+            <result name="success">Bienvenido.jsp</result>
+            <result name="input">inicio.jsp</result>
+        </action>
+    </package>
+</struts>
