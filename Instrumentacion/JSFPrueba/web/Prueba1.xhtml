@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <script name="jquery/jquery.js" library="primefaces"></script>
+    </h:head>
+    <f:view afterPhase="#{autoCompletado.phaseListener}">
+        <h:form prependId="false">            
+            <h2>Primefaces - Autocompletado</h2>
+            <h:outputText value="Ejemplo de Autocompletado:"/>
+            #{' '}
+            <p:autoComplete id="auto" value="#{autoCompletado.personas}"
+                            completeMethod="#{autoCompletado.complete}"
+                            var="persona"
+                            itemValue="#{persona.id}"
+                            itemLabel="#{persona.nombre}"
+                            converter="#{personaCovertidor}"
+                            >
+                <p:ajax event="itemSelect" listener="#{autoCompletado.handleSelect}" update="msg"></p:ajax>
+                <p:ajax event="itemUnselect" listener="#{autoCompletado.handleUnSelect}" update="msg"></p:ajax>
+            </p:autoComplete>
+            <br/>
+            <p:messages id="msg"/>
+        </h:form>
+    </f:view>
+</html>
